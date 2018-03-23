@@ -1,5 +1,5 @@
 # ![9.9] twitter_blocker_tool :seedling: 
-A python3 tool for blocking verified accounts. 
+A tool for blocking all verified users on Twitter. 
 
 
 
