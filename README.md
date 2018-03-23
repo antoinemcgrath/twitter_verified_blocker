@@ -1,8 +1,15 @@
 # ![9.9] twitter_blocker_tool :seedling: 
 A python3 tool for blocking verified accounts. 
-To run users will need require the Tweepy python package and (Twitter API/APP Keys)[https://apps.twitter.com/] 
+To run users will need the Tweepy python package and [Twitter API/APP Keys](https://apps.twitter.com/)
 
 
+--------
+
+### Run with:
+ *  `python3 twitter_verified_blocker.py`
+ 
+--------
+ 
 
 Functional notes:
 
