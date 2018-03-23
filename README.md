@@ -1,4 +1,4 @@
-# [9.9] twitter_blocker_tool :seedling: 
+# [![alt text][9.9][] twitter_blocker_tool :seedling: 
 A python tool for blocking verified accounts. 
 
 This python3 script uses tweepy and the Twitter API. 
