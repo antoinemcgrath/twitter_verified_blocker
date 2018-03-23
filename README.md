@@ -29,16 +29,12 @@ Functional notes:
        
     4. This script can be interupted and when restarted it will skip previosuly blocked accounts.
     
+    5. Do not use any of the code I have written with harmful intent. 
+    
+    6. By using this code you accept that every person has the right to choose their own gender identity.  
+    
 
- ###################################################################
- #  Do not use any of the code I have written with harmful intent. #
- #                                                                 #
- #  By using this code you accept that everyone has the            #
- #       right to choose their own gender identity.                #
- ###################################################################
-
-
-Comments, critiques? Contact me [![alt text][6.3]][3]  [![alt text][1.2]][1]
+Comments, critiques, need help? Contact me [![alt text][6.3]][3]  [![alt text][1.2]][1]
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 [1.2]: https://i.imgur.com/wWzX9uB.png (twitter icon without padding)
