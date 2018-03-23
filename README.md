@@ -1,6 +1,6 @@
 # ![9.9] twitter_blocker_tool :seedling: 
 A python3 tool for blocking verified accounts. 
-To run users will need the Tweepy python package and [Twitter APP Keys](https://apps.twitter.com/)
+
 
 
 --------
@@ -13,25 +13,28 @@ To run users will need the Tweepy python package and [Twitter APP Keys](https://
 
 Functional notes:
 
-    1. You may protect verified accounts (exclude them from being blocked and they will remain in your feed, etc). To do this:
+
+    1. To run users will need the Tweepy python package and [Twitter APP Keys](https://apps.twitter.com/)
+    
+    2. You may protect verified accounts (exclude them from being blocked and they will remain in your feed, etc). To do this:
        A. create the Twitter list "exceptions" 
        B. add verified users to "exceptions" 
         
-    2. This script will access 3 Twitter user lists, affirm verified users and block them. The three lists are:
+    3. This script will access 3 Twitter user lists, affirm verified users and block them. The three lists are:
        A. the Twitter managed verified user list
        B. the your followers list
        C. the followers list of "@Twitter"
 
-    3. This script has been built to observe rate limits and to use Twitter's API respectfully. 
+    4. This script has been built to observe rate limits and to use Twitter's API respectfully. 
        A. this script has been run for over 5 hours with no sign of interuption. 
        B. after running this script for 20 hours an estimated 300,000 verified users will have been ![9.9]blocked. 
        C. after 20 hours the user should experience the desired Twitter experience even though new acccounts will be verified regularly.
        
-    4. This script can be interupted and when restarted it will skip previosuly blocked accounts.
+    5. This script can be interupted and when restarted it will skip previosuly blocked accounts.
     
-    5. Do not use any of the code I have written with harmful intent. 
+    6. Do not use any of the code I have written with harmful intent. 
     
-    6. By using this code you accept that every person has the right to choose their own gender identity.  
+    7. By using this code you accept that every person has the right to choose their own gender identity.  
     
 
 Comments, critiques, need help? Contact me [![alt text][6.3]][3]  [![alt text][1.2]][1]
