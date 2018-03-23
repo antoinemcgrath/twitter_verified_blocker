@@ -1,6 +1,3 @@
-# ![9.9]
-# [!9.9]
-# [![9.9]]
 # ![9.9] twitter_blocker_tool :seedling: 
 A python tool for blocking verified accounts. 
 
