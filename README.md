@@ -13,10 +13,9 @@ To run users will need the Tweepy python package and [Twitter APP Keys](https://
 
 Functional notes:
 
-    1. You may protect verified accounts (exclude them from being blocked, they will remain in your feed, etc). To do this:
+    1. You may protect verified accounts (exclude them from being blocked and they will remain in your feed, etc). To do this:
        A. create the Twitter list "exceptions" 
        B. add verified users to "exceptions" 
-         
         
     2. This script will access 3 Twitter user lists, affirm verified users and block them. The three lists are:
        A. the Twitter managed verified user list
@@ -25,12 +24,18 @@ Functional notes:
 
     3. This script has been built to observe rate limits and to use Twitter's API respectfully. 
        A. this script has been run for over 5 hours with no sign of interuption. 
-       B. after running this script for 20 hours 300,000 verified users will have been blocked. 
-       C. after 20 hours the user should exeperience the desired Twitter experience even though new acccounts will be verified regularly.
+       B. after running this script for 20 hours an estimated 300,000 verified users will have been ![9.9]blocked. 
+       C. after 20 hours the user should experience the desired Twitter experience even though new acccounts will be verified regularly.
+       
     4. This script can be interupted and when restarted it will skip previosuly blocked accounts.
-    5. This script can be rerun at will
+    
 
-
+ ###################################################################
+ #  Do not use any of the code I have written with harmful intent. #
+ #                                                                 #
+ #  By using this code you accept that everyone has the            #
+ #       right to choose their own gender identity.                #
+ ###################################################################
 
 
 Comments, critiques? Contact me [![alt text][6.3]][3]  [![alt text][1.2]][1]
