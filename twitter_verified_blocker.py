@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 #### A tool for blocking all verified users on Twitter.
 
+#### Import dependencies
 import json
 import tweepy
 import re
@@ -13,7 +16,7 @@ exception_title = 'exceptions'
 mypath = "blocked.txt"
 counter = 0
 
-#### Load API keys file
+#### Load API keys file 
 keys_json = json.load(open('/usr/local/keys.json'))
 
 #### Specify key dictionary wanted (generally [Platform][User][API])
@@ -126,6 +129,6 @@ for a_user in tweepy.Cursor(api.followers, screen_name="Twitter", wait_on_rate_l
 ###################################################################
 #  Do not use any of the code I have written with harmful intent. #
 #                                                                 #
-#  By using this code you accept that everyone has the            #
+#    By using this code you accept that everyone has the          #
 #       right to choose their own gender identity.                #
 ###################################################################
