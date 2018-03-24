@@ -1,5 +1,5 @@
-# ![8.8] ![9.9] twitter_verified_blocker :seedling: 
-A tool for blocking all verified users on Twitter. 
+# ![8.8] twitter_verified_blocker ![9.9] 
+A tool for blocking all verified users on Twitter. :seedling: 
 
 
 
