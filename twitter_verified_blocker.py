@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 #### A tool for blocking all verified users on Twitter.
+## You may want to create a (public or private) Twitter list named 'exceptions' and add verified users to it. 
+## This 'exceptions' list that you create on Twitter is for verified accounts that you like and do not want to block. 
 
 #### Import dependencies
 import json
@@ -40,7 +42,7 @@ def get_exceptions_list():
         protect_list.append(x.id)
     return(protect_list)
 
-
+#### Checks id against exceptions list
 def check_exceptions_list(a_user_id_2_block):
     if a_user_id_2_block in protect_list:
         #print("User is on exceptions list & will not be blocked:", a_user_id_2_block, end='\r')
@@ -48,8 +50,7 @@ def check_exceptions_list(a_user_id_2_block):
     else:
         return(a_user_id_2_block)
 
-
-# Calculates and returns a human readable time difference
+#### Returns a human readable time difference
 def calc_time():
     #Stop the timer
     stop = timeit.default_timer()
@@ -60,8 +61,7 @@ def calc_time():
     timed = str("%d:%d:%d" % (hours, mins, secs))
     return(timed)
 
-
-#Check if user is already blocked, block & add to list if not
+#### Check if user is already blocked, blocks & add to list if not
 def append_to_blocked_list(a_user_id_2_block):
     with open(mypath, "r+", newline=None) as file:
         for line in file:
@@ -74,7 +74,7 @@ def append_to_blocked_list(a_user_id_2_block):
         api.create_block(a_user_id_2_block, wait_on_rate_limit=True)
         return("New")
 
-
+#### Increments counter by 1, if count is divisible by 100 print the count & time elapsed.
 def add_2_counter(counter):
     counter += 1
     if counter % 100 == 0:
@@ -85,7 +85,7 @@ def add_2_counter(counter):
         pass
     return(counter)
 
-
+#### Process user id, check exceptions list, check & block & append to blocked list, trigger counter
 def process_a_user_id(a_user_id, counter):
     a_user_id_2_block = check_exceptions_list(a_user_id)
     if a_user_id_2_block is not None:
@@ -95,7 +95,7 @@ def process_a_user_id(a_user_id, counter):
             counter = add_2_counter(counter)
     return(counter)
 
-
+#### Get an id from user & send to id processing
 def process_a_user(a_user, counter):
     if a_user.verified == True:
         a_user_id = a_user.id
@@ -105,9 +105,9 @@ def process_a_user(a_user, counter):
     return(counter)
 
 
-
 #### Work flow
 
+#### Acquire 'exceptions' list for blocking protection/exclusion
 protect_list = get_exceptions_list()
 print("Protect list number of entries =", len(protect_list))
 
