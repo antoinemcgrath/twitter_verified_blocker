@@ -1,4 +1,4 @@
-# ![9.9] twitter_verified_blocker :seedling: 
+# ![9.9] -> ![9.9] twitter_verified_blocker :seedling: 
 A tool for blocking all verified users on Twitter. 
 
 
@@ -47,5 +47,6 @@ Comments, critiques, need help? Contact me [![alt text][6.3]][3]  [![alt text][1
 [6.3]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
 [3]: https://github.com/antoinemcgrath
 
+[8.8]: http://i.imgur.com/ZgNGQi7.png (Twitter verified icon)
 [9.9]: http://i.imgur.com/Ycvb3WC.png (Blocked Twitter verified icon)
 
