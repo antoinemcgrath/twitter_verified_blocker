@@ -47,6 +47,6 @@ Comments, critiques, need help? Contact me [![alt text][6.3]][3]  [![alt text][1
 [6.3]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
 [3]: https://github.com/antoinemcgrath
 
-[8.8]: http://i.imgur.com/ZgNGQi7.png (Twitter verified icon)
-[9.9]: http://i.imgur.com/Ycvb3WC.png (Blocked Twitter verified icon)
+[8.8]: https://i.imgur.com/Q80dBc7.png  (Twitter verified icon)
+[9.9]: https://i.imgur.com/ShevBEa.png  (Blocked Twitter verified icon)
 
