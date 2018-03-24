@@ -14,23 +14,25 @@ A tool for blocking all verified users on Twitter.
 Functional notes:
 
 
-    1. To run users will need the Tweepy python package and [Twitter APP Keys](https://apps.twitter.com/)
+    1. You will need a Twitter APP Key (apps.twitter.com) for the account you are executing these blocking requests from.
     
-    2. You may protect verified accounts (exclude them from being blocked and they will remain in your feed, etc). To do this:
+    2. You may protect verified accounts (exclude them from being blocked and they will remain in your feed, etc). 
+       To do this:
        A. create the Twitter list "exceptions" 
        B. add verified users to "exceptions" 
         
-    3. This script will access 3 Twitter user lists, affirm verified users and block them. The three lists are:
+    3. This script will access 3 Twitter user lists, affirm verified users and block them. 
+       The three lists are:
        A. the Twitter managed verified user list
        B. the your followers list
        C. the followers list of "@Twitter"
 
     4. This script has been built to observe rate limits and to use Twitter's API respectfully. 
-       A. this script has been run for over 5 hours with no sign of interuption. 
-       B. after running this script for 20 hours an estimated 300,000 verified users will have been ![9.9]blocked. 
-       C. after 20 hours the user should experience the desired Twitter experience even though new acccounts will be verified regularly.
+       This script has been run for over 5 hours with no sign of interuption. 
+       After running this script for 20 hours an estimated 300,000 verified users will have been ![9.9]blocked. 
+       After 20 hours the user should experience the desired Twitter experience even though new acccounts will be verified regularly.
        
-    5. This script can be interupted and when restarted it will skip previosuly blocked accounts.
+    5. This script can be interupted and when restarted it will skip previously blocked accounts.
     
     6. Do not use any of the code I have written with harmful intent. 
     
