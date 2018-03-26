@@ -1,7 +1,7 @@
 # ![8.8] twitter_verified_blocker ![9.9] 
 A tool for blocking all verified users on Twitter. :seedling: 
 
-This script will [block](https://help.twitter.com/en/using-twitter/blocking-and-unblocking-accounts) all verified Twitter users. Twitter verified users will no longer be able to view your profile, and they will no longer appear in your feed wall or be able to message you.
+This script will [block](https://help.twitter.com/en/using-twitter/blocking-and-unblocking-accounts) all verified Twitter users. Twitter verified users will no longer be able to view your profile or message you, they will no longer appear in your feed wall.
 
 This script will need to be rerun periodically inorder to block new verified users.
 When this script was written in March 2018 a total of 291,582 verified accounts were found and blocked.
