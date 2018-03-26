@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
 #### A tool for blocking all verified users on Twitter.
-## You may want to create a (public or private) Twitter list named 'exceptions' and add verified users to it. 
-## This 'exceptions' list that you create on Twitter is for verified accounts that you like and do not want to block. 
+## You may want to create a (public or private) Twitter list named 'exceptions' and add verified users to it.
+## This 'exceptions' list that you create on Twitter is for verified accounts that you like and do not want to block.
 
 #### Import dependencies
 import json
@@ -18,7 +18,7 @@ exception_title = 'exceptions'
 mypath = "blocked.txt"
 counter = 0
 
-#### Load API keys file 
+#### Load API keys file
 keys_json = json.load(open('/usr/local/keys.json'))
 
 #### Specify key dictionary wanted (generally [Platform][User][API])
@@ -66,12 +66,19 @@ def append_to_blocked_list(a_user_id_2_block):
     with open(mypath, "r+", newline=None) as file:
         for line in file:
             if str(a_user_id_2_block) in line:
-                print("Previously added to block list")
+                #print("Previously added to block list")
                 return None
             else: # not found, we are at the eof
                 pass
         file.write(str(a_user_id_2_block) + '\n') # append missing data
-        api.create_block(a_user_id_2_block, wait_on_rate_limit=True)
+        try:
+            api.create_block(a_user_id_2_block, wait_on_rate_limit=True)
+        except Exception as e:
+            er = e
+            if e.api_code == 160:
+                print("Request to befriend made, pending approval")
+            if e.api_code == 50:
+                print("User not found", str(a_user_id_2_block))
         return("New")
 
 #### Increments counter by 1, if count is divisible by 100 print the count & time elapsed.
