@@ -18,18 +18,31 @@ exception_title = 'exceptions'
 mypath = "blocked.txt"
 counter = 0
 
-#### Load API keys file
-keys_json = json.load(open('/usr/local/keys.json'))
+def get_api_keys():
+    #### Set Twitter API key dictionary
+    try:    #### Attempt to load API keys file
+        keys_json = json.load(open('/usr/local/keys.json'))
+        #### Specify key dictionary wanted (generally [Platform][User][API])
+        #Keys = keys_json["Twitter"]["ClimateCong_Bot"]["ClimatePolitics"]
+        Keys = keys_json["Twitter"]["AGreenDCBike"]["HearHerVoice"]
+    except Exception as e:
+        er = e
+        if er.errno == 2: #File not found enter key dictionary values manually
+            print("\nNo twitter API key was found in /usr/local/keys.json\n",
+                 "Acquire an API key at https://apps.twitter.com/\n",
+                 "to supply key manually press Enter\n")
+            Keys = {}
+            Keys['Consumer Key (API Key)'] = input('Enter the Twitter API Consumer Key\n')
+            Keys['Consumer Secret (API Secret)'] = input('Enter the Twitter API Consumer Secret Key\n')
+            Keys['Access Token'] = input('Enter the Twitter API Access Token\n')
+            Keys['Access Token Secret'] = input('Enter the Twitter API Access Token Secret\n')
+            Keys['Owner'] = input('Enter your Twitter username associated with the API keys\n')
+        else:
+            print(e)
+    return(Keys)
 
-#### Specify key dictionary wanted (generally [Platform][User][API])
-Keys = keys_json["Twitter"]["ClimateCong_Bot"]["ClimateCongressBot"]
 
-#### Access API using key dictionary definitions
-auth = tweepy.OAuthHandler( Keys['Consumer Key (API Key)'], Keys['Consumer Secret (API Secret)'] )
-auth.set_access_token( Keys['Access Token'], Keys['Access Token Secret'] )
-#### retry_count/_delay/_errors is in anticipatation of twitter's API being over capacity (error 130) and etc
-api = tweepy.API(auth, retry_count=10, retry_delay=5, retry_errors=set([401, 404, 500, 503]), wait_on_rate_limit=True)
-user = Keys['Owner']
+Keys = get_api_keys()
 
 
 #### Fetch the user id's of those listed in the exceptions list
