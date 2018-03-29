@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 #### A tool for blocking all verified users on Twitter.
 ## You may want to create a (public or private) Twitter list named 'exceptions' and add verified users to it.
@@ -142,8 +142,6 @@ for a_user in tweepy.Cursor(api.followers, screen_name=user, wait_on_rate_limit=
 #### Block verified users that are following the user handle "Twitter"
 for a_user in tweepy.Cursor(api.followers, screen_name="Twitter", wait_on_rate_limit=True).items():
     counter = process_a_user(a_user, counter)
-
-
 
 
 ###################################################################

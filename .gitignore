@@ -1,10 +1,63 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
 *.py[cod]
 *$py.class
 
 # C extensions
 *.so
+
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#System backup files
+*~
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.lib
+*.sbr
+*.sdf
+*.pyc
+*.xml
+
+
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+
+
 
 # Distribution / packaging
 .Python
@@ -100,5 +153,39 @@ ENV/
 # mypy
 .mypy_cache/
 
-#Specific files
+
+# Directories to ignore
+gitignore/
+mw_site_backups/
+__pycache__/
+
+#Specific files to ignore
+deletelist.txt
 blocked.txt
+
+
+api_keys.json
+geckodriver.log
+/investigating_blank_pages/additional
+/data
+/backups
+/tweet_ids_list
+/tweet_ids_2nd
+/back_ups_tweet_id
+FILTER_ME_archive-master.zip
+/for_the_record
+/tweet_ids
+/tweet_ids_2nd.DS_Store
+._.DS_Store
+npm-debug.log
+crsreports.com/ssl/fullchain.pem
+crsreports.com/ssl/
+*.idea
+public/
+public/links_reports
+.DS_Store
+._.DS_Store
+node_modules/
+config.json
+views/
+crsreports.com/ssl/privkey.pem
