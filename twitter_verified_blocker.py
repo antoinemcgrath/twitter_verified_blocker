@@ -23,8 +23,8 @@ def get_api_keys():
     try:    #### Attempt to load API keys file
         keys_json = json.load(open('/usr/local/keys.json'))
         #### Specify key dictionary wanted (generally [Platform][User][API])
-        #Keys = keys_json["Twitter"]["ClimateCong_Bot"]["ClimatePolitics"]
-        Keys = keys_json["Twitter"]["AGreenDCBike"]["HearHerVoice"]
+        Keys = keys_json["Twitter"]["ClimateCong_Bot"]["ClimatePolitics"]
+        #Keys = keys_json["Twitter"]["AGreenDCBike"]["HearHerVoice"]
     except Exception as e:
         er = e
         if er.errno == 2: #File not found enter key dictionary values manually
@@ -41,9 +41,14 @@ def get_api_keys():
             print(e)
     return(Keys)
 
-
+#### Get keys
 Keys = get_api_keys()
 
+#### Access Twitter API using Tweepy & key dictionary definitions
+auth = tweepy.OAuthHandler( Keys['Consumer Key (API Key)'], Keys['Consumer Secret (API Secret)'] )
+auth.set_access_token( Keys['Access Token'], Keys['Access Token Secret'] )
+api = tweepy.API(auth)
+user = api.auth.get_username()
 
 #### Fetch the user id's of those listed in the exceptions list
 def get_exceptions_list():
