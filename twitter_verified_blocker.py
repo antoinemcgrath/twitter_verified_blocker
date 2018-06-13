@@ -90,7 +90,10 @@ def append_to_blocked_list(a_user_id_2_block):
                 pass
         file.write(str(a_user_id_2_block) + '\n') # append missing data
         try:
-            api.create_block(a_user_id_2_block, wait_on_rate_limit=True)
+            api.create_block(a_user_id_2_block, wait_on_rate_limit=True)  
+        except (ConnectionError, TimeoutError):
+            print("Will retry again in a little bit")
+            input("Press Enter to continue...")
         except Exception as e:
             er = e
             if e.api_code == 160:
