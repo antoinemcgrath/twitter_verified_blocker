@@ -33,22 +33,23 @@ def get_api_keys():
                  "to supply key manually press Enter\n")
             Keys = {}
             Keys['Consumer Key (API Key)'] = input('Enter the Twitter API Consumer Key\n')
-            Keys['Consumer Secret (API Secret)'] = input('Enter the Twitter API Consumer Secret Key\n')
-            Keys['Access Token'] = input('Enter the Twitter API Access Token\n')
-            Keys['Access Token Secret'] = input('Enter the Twitter API Access Token Secret\n')
+            Keys['Consumer Secret (API Secret)'] = input('Enter tdhe Twitter API Consumer Secret Key\n')
+            Keys['Bearer Token'] = input('Enter the Bearer Token\n')
             Keys['Owner'] = input('Enter your Twitter username associated with the API keys\n')
         else:
             print(e)
     return(Keys)
 
+                                                         
+                                                         
 #### Get keys
 Keys = get_api_keys()
 
 #### Access Twitter API using Tweepy & key dictionary definitions
-auth = tweepy.OAuthHandler( Keys['Consumer Key (API Key)'], Keys['Consumer Secret (API Secret)'] )
-auth.set_access_token( Keys['Access Token'], Keys['Access Token Secret'] )
+client = tweepy.Client( Keys['Bearer Token'] )
+auth = tweepy.OAuth2AppHandler( Keys['Consumer Key (API Key)'], Keys['Consumer Secret (API Secret)'] )
 api = tweepy.API(auth)
-user = api.auth.get_username()
+
 
 #### Fetch the user id's of those listed in the exceptions list
 def get_exceptions_list():
